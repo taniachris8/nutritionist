@@ -1,5 +1,5 @@
 // Cart.js
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useCart } from "../contexts/CartContext";
 import CartItem from "../components/CartItem";
 import "../App.css";

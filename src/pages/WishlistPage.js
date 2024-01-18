@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useWishlist } from "../contexts/WishlistContext";
 import "../App.css";
 import Footer from "../components/Footer";

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../App.css";
 import "./css/AccountPage.css";
 import Footer from "../components/Footer";
@@ -9,7 +9,7 @@ import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Cookies from "js-cookie";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { useUser } from "../contexts/UserContext";
 

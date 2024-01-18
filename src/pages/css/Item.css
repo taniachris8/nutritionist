@@ -1,0 +1,88 @@
+.item-container {
+  display: flex;
+  width: auto;
+  max-height: auto;
+  flex-direction: row;
+  margin-left: 300px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.image-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 10px;
+  width: 710px; /* Set the width of the image container */
+  /* margin: 0 auto;  */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.top-images,
+.bottom-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-photo,
+.bottom-photo {
+  width: 100%; /* Make each photo take up the full width of the container */
+}
+
+.top-photo img {
+  width: 350px; /* Set the width of each top image */
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom-photo img {
+  width: 230px; /* Set the width of each bottom image */
+  height: 60%;
+  object-fit: cover;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  margin-left: 40px;
+  padding: 0;
+  margin-bottom: 0;
+}
+.description-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: start;
+  font-weight: 600;
+}
+.item-button {
+  margin-bottom: 10px;
+}
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-continue-shopping-button {
+  position: relative;
+  width: 200px;
+}
+.modal-view-cart-button {
+  position: relative;
+  width: 200px;
+}
+.modal-item-details {
+  margin-left: 20px;
+}
+.spinner {
+  padding-top: 30px;
+  padding-left: 30px;
+  font-size: 40px;
+}

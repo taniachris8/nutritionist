@@ -1,0 +1,27 @@
+.cards {
+  padding: 0;
+  background: #fff;
+  justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card-wrapper {
+  /* margin: 4rem; */
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards-container {
+    justify-content: space-between;
+  }
+  .cards {
+    padding: 0;
+  }
+}

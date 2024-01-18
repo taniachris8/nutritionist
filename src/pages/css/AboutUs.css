@@ -1,0 +1,33 @@
+.aboutus-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* width: 80%; */
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+.aboutus-image-container {
+  position: relative;
+}
+.aboutus-text-container {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.aboutus-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.aboutus-text-container h1 {
+  padding-bottom: 20px;
+  text-align: start;
+}
+.aboutus-text-container p {
+  font-size: 17px;
+  padding-bottom: 10px;
+}

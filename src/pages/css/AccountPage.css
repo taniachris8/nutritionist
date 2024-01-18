@@ -1,0 +1,12 @@
+.custom-tab-container {
+  width: 100%;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+.tab-container-title {
+  margin-bottom: 30px;
+}
+.account-tabs {
+  height: 50px;
+}

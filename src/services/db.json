@@ -589,15 +589,6 @@
   ],
   "cart": [
     {
-      "id": "20-L",
-      "title": "Timeless Bra",
-      "price": "25€",
-      "size": "L",
-      "count": 1,
-      "userId": 4,
-      "path": "/bras"
-    },
-    {
       "id": "4-M",
       "image": "leggins2 - Copy.jpg",
       "title": "Timeless Leggings",
@@ -606,31 +597,19 @@
       "count": 1,
       "userId": 3,
       "path": "/leggings"
+    },
+    {
+      "id": "2-M",
+      "image": "leggins1 - Copy.jpg",
+      "title": "EssentialMotion Leggings",
+      "price": "50€",
+      "size": "M",
+      "count": 1,
+      "userId": 2,
+      "path": "/leggings"
     }
   ],
   "wishlist": [
-    {
-      "id": 2,
-      "title": "EssentialMotion Leggings",
-      "price": "50€",
-      "path": "/leggings",
-      "userId": 4
-    },
-    {
-      "id": 19,
-      "title": "Seamless Bra",
-      "price": "30€",
-      "path": "/bras",
-      "userId": 4
-    },
-    {
-      "id": 1,
-      "image": "leggins2 - Copy.jpg",
-      "title": "ClassicFit Gym Leggings",
-      "price": "40€",
-      "path": "/leggings",
-      "userId": 3
-    },
     {
       "id": 3,
       "image": "leggins3 - Copy.jpg",
@@ -640,20 +619,12 @@
       "userId": 3
     },
     {
-      "id": 18,
-      "image": "bra4.jpg",
-      "title": "Classic Bra",
-      "price": "25€",
-      "path": "/bras",
-      "userId": 4
-    },
-    {
-      "id": 17,
-      "image": "bra2.jpg",
-      "title": "Everyday Sports Bra",
-      "price": "26€",
-      "path": "/bras",
-      "userId": 4
+      "id": 10,
+      "image": "bottle.jpg",
+      "title": "Bottle",
+      "price": "15€",
+      "path": "/accessories",
+      "userId": 2
     }
   ]
 }

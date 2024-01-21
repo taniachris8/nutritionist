@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { NavDropdown } from "react-bootstrap";
 import "./componentsCss/Navbar.css";
@@ -9,7 +9,7 @@ import { useUser } from "../contexts/UserContext";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [setButton] = useState(true);
+  const [button, setButton] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const navigate = useNavigate();
@@ -41,17 +41,26 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
+  const showButton = useCallback(() => {
     if (window.innerWidth <= 960) {
       setButton(false);
     } else {
       setButton(true);
     }
-  };
+  }, []); // Empty dependency array since showButton doesn't depend on external variables
 
   useEffect(() => {
+    // Initial call on mount
     showButton();
-  }, []);
+
+    // Event listener for resize
+    window.addEventListener("resize", showButton);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", showButton);
+    };
+  }, [showButton]); // Include showButton in the dependencies array
 
   window.addEventListener("resize", showButton);
 

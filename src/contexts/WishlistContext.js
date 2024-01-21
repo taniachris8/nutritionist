@@ -1,17 +1,27 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useMemo,
+} from "react";
 import { ShopService } from "../services/ShopService";
 
 const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
-  const shopService = new ShopService("http://localhost:8080");
+  // Memoize the creation of shopService
+  const shopService = useMemo(
+    () => new ShopService("http://localhost:8080"),
+    []
+  );
 
   useEffect(() => {
     shopService.getWishlistItems().then((response) => {
       setWishlist(response);
     });
-  }, []);
+  }, [shopService]);
 
   const addToWishlist = async (item) => {
     try {

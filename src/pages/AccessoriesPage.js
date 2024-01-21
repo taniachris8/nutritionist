@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "../App.css";
 import ShopCardItem from "../components/ShopCardItem";
 import "./css/LeggingsPage.css";
@@ -8,13 +8,17 @@ import { ShopService } from "../services/ShopService";
 
 function AccessoriesPage() {
   const [accessoriesItems, setAccessoriesItems] = useState([]);
-  const shopService = new ShopService("http://localhost:8080");
+  // Memoize the creation of shopService
+  const shopService = useMemo(
+    () => new ShopService("http://localhost:8080"),
+    []
+  );
 
   useEffect(() => {
     shopService.getAllAccessories().then((response) => {
       setAccessoriesItems(response.data);
     });
-  }, []);
+  }, [shopService]);
 
   const renderShopItems = () => {
     const itemsChunks = [];

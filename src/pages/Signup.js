@@ -28,10 +28,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "http://localhost:8080/users",
-        formData
-      );
+      const _ = await axios.post("http://localhost:8080/users", formData); // eslint-disable-line no-unused-vars
       // Clear the input fields
       setFormData({
         firstName: "",

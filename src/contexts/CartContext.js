@@ -1,17 +1,27 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  useMemo,
+} from "react";
 import { ShopService } from "../services/ShopService";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const shopService = new ShopService("http://localhost:8080");
+  // Memoize the creation of shopService
+  const shopService = useMemo(
+    () => new ShopService("http://localhost:8080"),
+    []
+  );
 
   useEffect(() => {
     shopService.getCartItems().then((response) => {
       setCart(response.data);
     });
-  }, []);
+  }, [shopService]); // Include shopService in the dependencies array
 
   const setNewCart = (cart) => {
     setCart(cart);

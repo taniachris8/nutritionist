@@ -9,7 +9,6 @@ import { useUser } from "../contexts/UserContext";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const navigate = useNavigate();
@@ -43,9 +42,11 @@ function Navbar() {
 
   const showButton = useCallback(() => {
     if (window.innerWidth <= 960) {
-      setButton(false);
+      // Handle logic for smaller screens
+      setClick(false); // You may also want to setClick to false based on your logic
     } else {
-      setButton(true);
+      // Handle logic for larger screens
+      setClick(true); // You may also want to setClick to true based on your logic
     }
   }, []); // Empty dependency array since showButton doesn't depend on external variables
 

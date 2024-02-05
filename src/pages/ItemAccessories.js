@@ -26,9 +26,7 @@ function ItemAccessories() {
   const { user } = useUser();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [slides, setSlides] = useState([]); // Initialize slides state
-  const [isMobileDevice, setIsMobileDevice] = useState(
-    window.innerWidth <= 430
-  );
+  const [isMobileDevice] = useState(window.innerWidth <= 430);
 
   useEffect(() => {
     // Fetch item details from your API or JSON server
@@ -173,10 +171,6 @@ function ItemAccessories() {
           <p>{item.shortDescription}</p>
           <p>{item.price}</p>
           <p>One size</p>
-          {/* <SizeSelector
-            sizes={["XS", "S", "M", "L", "XL", "XXL"]}
-            onSelectSize={handleSizeSelect}
-          /> */}
           <div className="details">
             <h1 className="description-title">DESCRIPTION</h1>
             <p>{item.description}</p>

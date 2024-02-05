@@ -26,9 +26,7 @@ function ItemSupplements() {
   const { user } = useUser();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [slides, setSlides] = useState([]); // Initialize slides state
-  const [isMobileDevice, setIsMobileDevice] = useState(
-    window.innerWidth <= 430
-  );
+  const [isMobileDevice] = useState(window.innerWidth <= 430);
 
   useEffect(() => {
     // Fetch item details from your API or JSON server

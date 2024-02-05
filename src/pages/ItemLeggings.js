@@ -16,6 +16,7 @@ import { Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useUser } from "../contexts/UserContext";
 import LoginModal from "../components/LoginModal";
+import ItemImageMobile from "../components/ItemImageMobile";
 
 function ItemLeggings() {
   const { id } = useParams();
@@ -28,6 +29,10 @@ function ItemLeggings() {
   const [showModal, setShowModal] = useState(false);
   const { user } = useUser();
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [slides, setSlides] = useState([]); // Initialize slides state
+  const [isMobileDevice, setIsMobileDevice] = useState(
+    window.innerWidth <= 430
+  );
 
   useEffect(() => {
     // Fetch item details from your API or JSON server
@@ -36,11 +41,23 @@ function ItemLeggings() {
       .then((response) => {
         setItem(response.data);
         setIsItemInWishlist(wishlist.some((w) => w.id === response.data.id));
+
+        //Set slides based on item and mobile device status
+        const newSlides = [
+          { url: `/images/${response.data.imageLeft}` },
+          { url: `/images/${response.data.imageRight}` },
+          { url: `/images/${response.data.imageBottom1}` },
+          { url: `/images/${response.data.imageBottom2}` },
+          { url: `/images/${response.data.imageBottom3}` },
+        ];
+        setSlides(newSlides);
       })
       .catch((error) => {
         console.error("Error fetching item details:", error);
       });
   }, [id, wishlist]);
+
+  console.log("Slides in ItemLeggings:", slides);
 
   // const isItemInWishlist = wishlist.some((item) => item.id);
 
@@ -125,39 +142,45 @@ function ItemLeggings() {
   return (
     <>
       <div className="item-container">
-        <div className="image-container">
-          <div className="top-images">
-            <div className="top-photo">
-              <img src={`/images/${item.imageLeft}`} alt="Left Leggings" />
+        {isMobileDevice ? (
+          <div className="item-slides-styles">
+            <ItemImageMobile slides={slides} />
+          </div>
+        ) : (
+          <div className="image-container">
+            <div className="top-images">
+              <div className="top-photo">
+                <img src={`/images/${item.imageLeft}`} alt="Left Leggings" />
+              </div>
+              <div className="top-photo">
+                <img src={`/images/${item.imageRight}`} alt="Left Leggings" />
+              </div>
             </div>
-            <div className="top-photo">
-              <img src={`/images/${item.imageRight}`} alt="Left Leggings" />
+            <div className="bottom-images">
+              <div className="bottom-photo">
+                <img
+                  style={{ objectFit: "cover" }}
+                  src={`/images/${item.imageBottom1}`}
+                  alt="Bottom Leggings 1"
+                />
+              </div>
+              <div className="bottom-photo">
+                <img
+                  style={{ objectFit: "cover" }}
+                  src={`/images/${item.imageBottom2}`}
+                  alt="Bottom Leggings 2"
+                />
+              </div>
+              <div className="bottom-photo">
+                <img
+                  style={{ objectFit: "cover" }}
+                  src={`/images/${item.imageBottom3}`}
+                  alt="Bottom Leggings 3"
+                />
+              </div>
             </div>
           </div>
-          <div className="bottom-images">
-            <div className="bottom-photo">
-              <img
-                style={{ objectFit: "cover" }}
-                src={`/images/${item.imageBottom1}`}
-                alt="Bottom Leggings 1"
-              />
-            </div>
-            <div className="bottom-photo">
-              <img
-                style={{ objectFit: "cover" }}
-                src={`/images/${item.imageBottom2}`}
-                alt="Bottom Leggings 2"
-              />
-            </div>
-            <div className="bottom-photo">
-              <img
-                style={{ objectFit: "cover" }}
-                src={`/images/${item.imageBottom3}`}
-                alt="Bottom Leggings 3"
-              />
-            </div>
-          </div>
-        </div>
+        )}
         <div className="left-container">
           <h2>{item.title}</h2>
           <p>{item.shortDescription}</p>

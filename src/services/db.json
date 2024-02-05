@@ -607,6 +607,16 @@
       "count": 1,
       "userId": 2,
       "path": "/leggings"
+    },
+    {
+      "id": "1-M",
+      "image": "leggins2 - Copy.jpg",
+      "title": "ClassicFit Gym Leggings",
+      "price": "40€",
+      "size": "M",
+      "count": 2,
+      "userId": 2,
+      "path": "/leggings"
     }
   ],
   "wishlist": [
@@ -619,11 +629,19 @@
       "userId": 3
     },
     {
-      "id": 10,
-      "image": "bottle.jpg",
-      "title": "Bottle",
-      "price": "15€",
-      "path": "/accessories",
+      "id": 2,
+      "image": "leggins1 - Copy.jpg",
+      "title": "EssentialMotion Leggings",
+      "price": "50€",
+      "path": "/leggings",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "image": "leggins2 - Copy.jpg",
+      "title": "Timeless Leggings",
+      "price": "38€",
+      "path": "/leggings",
       "userId": 2
     }
   ]

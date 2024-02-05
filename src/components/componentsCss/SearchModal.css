@@ -24,7 +24,6 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  overflow-y: auto;
   flex-grow: 1; /* Expand to fill remaining space */
   overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
   padding: 20px;
@@ -32,4 +31,34 @@
 .search-result-items {
   width: 25%;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 430px) {
+  /* Mobile styles */
+  .search-body {
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1; /* Expand to fill remaining space */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  /* Tablet styles */
+  .search-body {
+    flex-grow: 1; /* Expand to fill remaining space */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
+    min-height: 100vh; /* Set a minimum height of the viewport height */
+    margin-bottom: -300px; /* Counteract the padding-bottom with a negative margin */
+    padding-bottom: 300px; /* Set the padding-bottom as needed */
+  }
+  .search-result-items {
+    width: 40%; /* Set width to 48% to allow two items in a row with some spacing */
+    margin-right: 8%; /* Adjust margin-right for spacing between items */
+    margin-bottom: 20px;
+  }
 }

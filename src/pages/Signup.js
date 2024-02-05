@@ -45,11 +45,7 @@ function Signup() {
     <>
       <div className="register-container ">
         <h1 className="register-title">Create an account</h1>
-        <Form
-          style={{ width: "600px" }}
-          className="align-items-center"
-          onSubmit={handleSignUp}
-        >
+        <Form onSubmit={handleSignUp} className="register-form-container">
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>First Name</Form.Label>
             <Form.Control

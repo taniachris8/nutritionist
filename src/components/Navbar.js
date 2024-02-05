@@ -1,23 +1,29 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { NavDropdown } from "react-bootstrap";
 import "./componentsCss/Navbar.css";
 import Cookies from "js-cookie";
 import LoginModal from "./LoginModal";
 import { useCart } from "../contexts/CartContext";
 import { useUser } from "../contexts/UserContext";
+import MobileShop from "./MobileShop";
+import NavDropdown from "./NavDropdown";
+import "./componentsCss/NavDropdown.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showNavbarButton, setShowNavbarButton] = useState(false);
+  const [showNavbarDropdown, setShowNavbarDropDowm] = useState(true);
+  const [showMobileShop, setShowMobileShop] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
   const navigate = useNavigate();
   const { cart } = useCart();
   const [totalItemCount, setTotalItemCount] = useState(0);
   const { user } = useUser();
+  const [isNavDropdownVisible, setNavDropdownVisible] = useState(false);
 
   useEffect(() => {
-    // Check for the user's login status when the component mounts
+    // Checking for the user's login status when the component mounts
     const userCookie = Cookies.get("user");
 
     if (userCookie) {
@@ -27,41 +33,52 @@ function Navbar() {
       // User is not logged in
       setIsLoggedIn(false);
     }
-  }, []); // Empty dependency array ensures the effect runs only once
+  }, []);
 
   useEffect(() => {
-    // Calculate total item count for the current user's cart when cart changes
+    // Calculating total item count for the current user's cart when cart changes
     const count = cart
       .filter((item) => item.userId === user?.id)
       .reduce((total, item) => total + item.count, 0);
     setTotalItemCount(count);
   }, [cart, user]);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => {
+    setClick(!click);
+    // Toggling body scrolling based on the menu state
+    document.body.style.overflow = click ? "auto" : "hidden";
+  };
+  const closeMobileMenu = () => {
+    setClick(false);
+    // Allowing body scrolling when the menu is closed
+    document.body.style.overflow = "auto";
+  };
 
   const showButton = useCallback(() => {
     if (window.innerWidth <= 960) {
-      // Handle logic for smaller screens
-      setClick(false); // You may also want to setClick to false based on your logic
+      // Handling logic for smaller screens
+      setShowNavbarButton(true);
+      setShowNavbarDropDowm(false);
+      setShowMobileShop(true);
+      setClick(false);
     } else {
-      // Handle logic for larger screens
-      setClick(true); // You may also want to setClick to true based on your logic
+      // Handling logic for larger screens
+      setShowNavbarButton(false);
+      setShowNavbarDropDowm(true);
+      setShowMobileShop(false);
+      setClick(true);
     }
-  }, []); // Empty dependency array since showButton doesn't depend on external variables
+  }, []);
 
   useEffect(() => {
-    // Initial call on mount
     showButton();
-
     // Event listener for resize
     window.addEventListener("resize", showButton);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("resize", showButton);
     };
-  }, [showButton]); // Include showButton in the dependencies array
+  }, [showButton]);
 
   window.addEventListener("resize", showButton);
 
@@ -85,6 +102,33 @@ function Navbar() {
     setShowLoginModal(false);
   };
 
+  const slides = [
+    {
+      url: "/images/image10Copy.jpg",
+      title: "SHOP LEGGINGS",
+      link: "leggings",
+    },
+    { url: "/images/image11Copy.jpg", title: "SHOP SPORT BRAS", link: "bras" },
+    {
+      url: "/images/image12Copy.jpg",
+      title: "SHOP ACCESSORIES",
+      link: "accessories",
+    },
+    {
+      url: "/images/image13Copy.jpg",
+      title: "SHOP SUPPLEMENTS",
+      link: "supplements",
+    },
+  ];
+
+  const handleMouseEnter = () => {
+    setNavDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setNavDropdownVisible(false);
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -96,52 +140,28 @@ function Navbar() {
             onClick={closeMobileMenu}
           >
             PulseActive
-            <i className="fa-solid fa-heart-pulse"></i>
+            <i className="fa-solid fa-heart-pulse heart-navbar"></i>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-x" : "fa-solid fa-bars"}></i>
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavDropdown
-                href="/shop"
-                title="SHOP"
-                id="basic-nav-dropdown"
-                className="nav-links"
-                bg="dark"
-                data-bs-theme="dark"
+            {showNavbarDropdown && (
+              <li
+                className="nav-item"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                <Link className="shop-menu-item" to="/leggings">
-                  <NavDropdown.Item href="#action/3.1">
-                    Leggings
-                  </NavDropdown.Item>
+                <Link to="/shop" className="nav-links">
+                  SHOP
                 </Link>
-                <NavDropdown.Divider />
-                <Link className="shop-menu-item" to="/bras">
-                  <NavDropdown.Item href="#action/3.2">
-                    Sports Bras
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Divider />
-                <Link className="shop-menu-item" to="/accessories">
-                  <NavDropdown.Item href="#action/3.3">
-                    Accessories
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Divider />
-                <Link className="shop-menu-item" to="/supplements">
-                  <NavDropdown.Item href="#action/3.3">
-                    Supplements
-                  </NavDropdown.Item>
-                </Link>
-                <NavDropdown.Divider />
-                <Link className="shop-menu-item" to="/shop">
-                  <NavDropdown.Item href="#action/3.3">
-                    All Products
-                  </NavDropdown.Item>
-                </Link>
-              </NavDropdown>
-            </li>
+              </li>
+            )}
+            {showMobileShop && (
+              <div className="slides-styles">
+                <MobileShop slides={slides} closeMobileMenu={closeMobileMenu} />
+              </div>
+            )}
             <li className="nav-item">
               <Link
                 to="/loyalty_club"
@@ -160,15 +180,17 @@ function Navbar() {
                 ABOUT US
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/sign_up"
-                className="nav-links-mobile"
-                onClick={closeMobileMenu}
-              >
-                SIGN UP
-              </Link>
-            </li>
+            {showNavbarButton && (
+              <li className="nav-item">
+                <Link
+                  to="/login"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  LOG IN / SIGN UP
+                </Link>
+              </li>
+            )}
           </ul>
           <div className="icons-wrapper">
             <Link to="/search">
@@ -191,7 +213,7 @@ function Navbar() {
               </Link>
             )}
             {isLoggedIn ? (
-              // Display a logout button when the user is logged in
+              // Displaying a logout button when the user is logged in
               <Link to="/account">
                 <i
                   className="fa-solid fa-user"
@@ -199,7 +221,7 @@ function Navbar() {
                 ></i>
               </Link>
             ) : (
-              // Display a link to the login page when the user is not logged in
+              // Displaying a link to the login page when the user is not logged in
               <Link to="/login">
                 <i
                   className="fa-solid fa-user"
@@ -232,7 +254,14 @@ function Navbar() {
             )}
           </div>
         </div>
+        {isNavDropdownVisible && (
+          <NavDropdown
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          />
+        )}
       </nav>
+
       <LoginModal
         show={showLoginModal}
         onHide={handleLoginModalClose}

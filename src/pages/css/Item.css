@@ -10,12 +10,12 @@
 .image-container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   gap: 10px;
   width: 710px; /* Set the width of the image container */
-  /* margin: 0 auto;  */
-  margin-bottom: 0;
+  margin-bottom: 250px;
   padding-bottom: 0;
+  height: 710px;
 }
 
 .top-images,
@@ -24,8 +24,7 @@
   justify-content: space-between;
 }
 
-.top-photo,
-.bottom-photo {
+.top-photo {
   width: 100%; /* Make each photo take up the full width of the container */
 }
 
@@ -34,11 +33,16 @@
   height: 100%;
   object-fit: cover;
 }
-
+.bottom-photo {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 .bottom-photo img {
-  width: 230px; /* Set the width of each bottom image */
-  height: 60%;
   object-fit: cover;
+  position: relative;
+  width: 230px; /* Set the width of each bottom image */
+  /* height: 60%; */
 }
 .left-container {
   display: flex;
@@ -85,4 +89,62 @@
   padding-top: 30px;
   padding-left: 30px;
   font-size: 40px;
+}
+
+@media only screen and (max-width: 430px) {
+  /* Mobile styles */
+
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    padding-right: 14px;
+  }
+  .item-slides-styles {
+    width: 390px;
+    height: 520px;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+  .modal-continue-shopping-button {
+    position: relative;
+    width: 180px;
+  }
+  .modal-view-cart-button {
+    position: relative;
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  /* Tablet styles */
+  .item-container {
+    display: flex;
+    width: auto;
+    max-height: auto;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 0;
+    align-items: center;
+  }
+  .image-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 710px; /* Set the width of the image container */
+    margin-bottom: 200px;
+  }
+  .left-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+  }
 }

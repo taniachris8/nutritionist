@@ -28,11 +28,6 @@ function AccountPage() {
     navigate("/login");
   };
 
-  // Retrieve user information from the cookie
-  // const userCookie = Cookies.get("user");
-  // console.log(userCookie);
-  // const user = userCookie ? JSON.parse(userCookie) : null;
-
   return (
     <>
       <Banner
@@ -68,25 +63,29 @@ function AccountPage() {
               </Nav>
             </Col>
             <Col sm={9}>
-              <Tab.Content>
-                <Tab.Pane eventKey="overview">
+              <Tab.Content className="overview-container">
+                <Tab.Pane eventKey="overview" className="account-tabs-overview">
                   <p>Hi {user ? user.firstName : "Guest"}!</p>
                   <p>
                     Welcome to your Account. This is where you can view your
                     orders and edit your contact details.
                   </p>
                 </Tab.Pane>
-                <Tab.Pane eventKey="orders">
+                <Tab.Pane eventKey="orders" className="account-tabs-overview">
                   You have not placed an order yet.
                 </Tab.Pane>
-                <Tab.Pane eventKey="profile">Second tab content</Tab.Pane>
-                <Tab.Pane eventKey="address">Shipping Address</Tab.Pane>
-                <Tab.Pane eventKey="wishlist">
+                <Tab.Pane eventKey="profile" className="account-tabs-overview">
+                  Second tab content
+                </Tab.Pane>
+                <Tab.Pane eventKey="address" className="account-tabs-overview">
+                  Shipping Address
+                </Tab.Pane>
+                <Tab.Pane eventKey="wishlist" className="account-tabs-overview">
                   Build your wishlist to save all your favourite must-have items
                   for later. Once you are ready to shop, simply add each item
                   from your wishlist to your cart.
                 </Tab.Pane>
-                <Tab.Pane eventKey="log-out">
+                <Tab.Pane eventKey="log-out" className="account-tabs-overview">
                   <Button variant="primary" onClick={handleLogout}>
                     Logout
                   </Button>

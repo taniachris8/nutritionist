@@ -5,7 +5,13 @@ import "./componentsCss/Cards.css";
 function Cards() {
   return (
     <div className="cards">
-      <h1> Check out our products </h1>
+      <div className="cards-header">
+        <h1 className="check-out-our-products-title">Check out our products</h1>
+        <p className="cards-header-p">
+          Everything you need to become a better version of yourself{" "}
+        </p>
+      </div>
+
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">

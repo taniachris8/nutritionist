@@ -13,7 +13,7 @@ function Banner(props) {
     <>
       <div className="banner-container" style={bannerStyle}>
         <div className="text">
-          <h1>{props.title}</h1>
+          <h1 className="banner-title">{props.title}</h1>
           <p>{props.text}</p>
         </div>
       </div>

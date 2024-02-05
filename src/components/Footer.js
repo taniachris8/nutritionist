@@ -116,7 +116,7 @@ function Footer() {
               <i className="fa-solid fa-heart-pulse" />
             </Link>
           </div>
-          <small className="website-rights">® 2023</small>
+          <small className="website-rights">® 2024</small>
           <div className="social-icons">
             <Link
               className="social-icon-link facebook"

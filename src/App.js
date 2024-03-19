@@ -2,24 +2,14 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.js";
-import LeggingsPage from "./pages/LeggingsPage.js";
-import LoyaltyClub from "./pages/LoyaltyClub.js";
-import AboutUs from "./pages/AboutUs";
-import AccessoriesPage from "./pages/AccessoriesPage.js";
-import BrasPage from "./pages/BrasPage.js";
-import SupplementsPage from "./pages/Supplements.js";
-import Login from "./pages/Login.js";
-import Shop from "./pages/Shop.js";
-import ItemLeggings from "./pages/ItemLeggings.js";
-import ItemBra from "./pages/ItemBra.js";
-import ItemAccessories from "./pages/ItemAccessories.js";
-import ItemSupplements from "./pages/ItemSupplements.js";
-import Cart from "./pages/Cart.js";
-import WishlistPage from "./pages/WishlistPage.js";
-import Signup from "./pages/Signup.js";
-import AccountPage from "./pages/AccountPage.js";
+import AboutMe from "./pages/AboutMe.js";
+import Feedback from "./pages/Feedback.js";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SearchModal from "./components/SearchModal.js";
+import Services from "./pages/Services.js";
+import FirstConsultation from "./pages/FirstConsultation.js";
+import PersonalConsultation from "./pages/PersonalConsultation.js";
+import PersonalPlan from "./pages/PersonalPlan.js";
+import WhatIsNutritionology from "./pages/WhatIsNutritionology.js";
 
 function App() {
   return (
@@ -27,23 +17,16 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/leggings" element={<LeggingsPage />} />
-        <Route path="/loyalty_club" element={<LoyaltyClub />} />
-        <Route path="/about_us" element={<AboutUs />} />
-        <Route path="/accessories" element={<AccessoriesPage />} />
-        <Route path="/bras" element={<BrasPage />} />
-        <Route path="/supplements" element={<SupplementsPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/leggings/:id" element={<ItemLeggings />} />
-        <Route path="/bras/:id" element={<ItemBra />} />
-        <Route path="/accessories/:id" element={<ItemAccessories />} />
-        <Route path="/supplements/:id" element={<ItemSupplements />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<WishlistPage />} />
-        <Route path="/sign-up" element={<Signup />} />
-        <Route path="/account" element={<AccountPage />} />
-        <Route path="/search" element={<SearchModal />} />
+        <Route path="/about_me" element={<AboutMe />} />
+        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/first_consultation" element={<FirstConsultation />} />
+        <Route
+          path="/personal_consultation"
+          element={<PersonalConsultation />}
+        />
+        <Route path="/personal_plan" element={<PersonalPlan />} />
+        <Route path="/nutritionology" element={<WhatIsNutritionology />} />
       </Routes>
     </Router>
   );

@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./componentsCss/MobileShop.css";
 
 const MobileShop = ({ slides, closeMobileMenu }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const sliderStyles = {
-    height: "100%",
-    position: "relative",
-  };
 
   const slideStyles = {
     width: "100%",
@@ -15,27 +11,9 @@ const MobileShop = ({ slides, closeMobileMenu }) => {
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundImage: `url(${slides[currentIndex].url})`,
-  };
-
-  const leftArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "32px",
-    fontSize: "30px",
-    color: "white",
-    zIndex: 1,
-    cursor: "pointer",
-  };
-  const rightArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "32px",
-    fontSize: "30px",
-    color: "white",
-    zIndex: 1,
-    cursor: "pointer",
+    objectFit: "cover",
+    display: "flex",
+    position: "relative",
   };
 
   const goToPrevious = () => {
@@ -50,25 +28,17 @@ const MobileShop = ({ slides, closeMobileMenu }) => {
     setCurrentIndex(newIndex);
   };
 
-  const titleStyles = {
-    color: "white",
-    fontSize: "19px",
-    position: "absolute",
-    bottom: "10%",
-    left: "10%",
-  };
-
   return (
-    <div style={sliderStyles}>
-      <div style={leftArrowStyles} onClick={goToPrevious}>
+    <div className="slider">
+      <div className="left-arrow" onClick={goToPrevious}>
         &lt;
       </div>
-      <div style={rightArrowStyles} onClick={goToNext}>
+      <div className="right-arrow" onClick={goToNext}>
         &gt;
       </div>
       <div style={slideStyles}>
         <Link to={`/${slides[currentIndex].link}`} onClick={closeMobileMenu}>
-          <h3 style={titleStyles}>{slides[currentIndex].title}</h3>
+          <h3 className="title">{slides[currentIndex].title}</h3>
         </Link>
       </div>
     </div>

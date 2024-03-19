@@ -1,0 +1,104 @@
+.slider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 40px;
+  color: rgb(48, 25, 52);
+  z-index: 1;
+  cursor: pointer;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 40px;
+  color: rgb(48, 25, 52);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.testimonial {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 0;
+  background-color: rgb(237, 237, 237);
+}
+.testi-image {
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.testi-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.testi-prg {
+  padding: 0 160px;
+  text-align: center;
+  font-size: 16px;
+}
+.fa-quote-left {
+  color: rgb(48, 25, 52);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.testi-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testi-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.testi-job {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 375px) {
+  /* Mobile styles */
+}
+@media only screen and (max-width: 390px) {
+  /* Mobile styles */
+}
+@media only screen and (max-width: 430px) {
+  /* Mobile styles */
+  .slider {
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  .testi-image {
+    height: 100px;
+    width: 100px;
+  }
+  .testi-prg {
+    padding: 0 70px;
+    font-size: 14px;
+  }
+  .left-arrow {
+    font-size: 30px;
+  }
+  .right-arrow {
+    font-size: 30px;
+  }
+  .fa-quote-left {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,58 @@
+.book-modal-title {
+  color: rgb(48, 25, 52);
+  font-size: 19px;
+  padding-top: 14px;
+}
+.book-button-container {
+  display: flex;
+  justify-content: end;
+}
+
+.book-btn {
+  background-color: rgb(48, 25, 52);
+  font-size: 18px;
+  color: white;
+  width: 140px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: none;
+  border-radius: 22px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  display: block;
+}
+.book-btn:hover {
+  background-color: transparent;
+  color: rgb(48, 25, 52);
+  border: 1px solid rgb(48, 25, 52);
+}
+.book-close-btn {
+  background-color: transparent;
+  font-size: 18px;
+  color: rgb(48, 25, 52);
+  border: 1px solid rgb(48, 25, 52);
+  width: 140px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 22px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  display: block;
+  margin-right: 10px;
+}
+.book-close-btn:hover {
+  background-color: rgb(48, 25, 52);
+  color: white;
+  border: none;
+}
+.book-prg {
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}
+.alert-message-prg {
+  margin-bottom: 0;
+  font-size: 16px;
+}

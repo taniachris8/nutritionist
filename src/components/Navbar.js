@@ -1,47 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./componentsCss/Navbar.css";
-import Cookies from "js-cookie";
-import LoginModal from "./LoginModal";
-import { useCart } from "../contexts/CartContext";
-import { useUser } from "../contexts/UserContext";
 import MobileShop from "./MobileShop";
 import NavDropdown from "./NavDropdown";
 import "./componentsCss/NavDropdown.css";
+import AskQuestionModal from "./AskQuestionModal";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [showNavbarButton, setShowNavbarButton] = useState(false);
-  const [showNavbarDropdown, setShowNavbarDropDowm] = useState(true);
+  const [showNavbarDropDown, setShowNavbarDropDowm] = useState(true);
   const [showMobileShop, setShowMobileShop] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const navigate = useNavigate();
-  const { cart } = useCart();
-  const [totalItemCount, setTotalItemCount] = useState(0);
-  const { user } = useUser();
   const [isNavDropdownVisible, setNavDropdownVisible] = useState(false);
+  const [showAskQuestion, setShowAskQuestion] = useState(false);
 
-  useEffect(() => {
-    // Checking for the user's login status when the component mounts
-    const userCookie = Cookies.get("user");
-
-    if (userCookie) {
-      // User is logged in
-      setIsLoggedIn(true);
-    } else {
-      // User is not logged in
-      setIsLoggedIn(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    // Calculating total item count for the current user's cart when cart changes
-    const count = cart
-      .filter((item) => item.userId === user?.id)
-      .reduce((total, item) => total + item.count, 0);
-    setTotalItemCount(count);
-  }, [cart, user]);
+  const handleCloseAskQuestion = () => setShowAskQuestion(false);
+  const handleShowAskQuestion = () => setShowAskQuestion(true);
 
   const handleClick = () => {
     setClick(!click);
@@ -55,8 +29,33 @@ function Navbar() {
   };
 
   const showButton = useCallback(() => {
-    if (window.innerWidth <= 960) {
+    const innerWidth = window.innerWidth;
+    if (innerWidth <= 768) {
       // Handling logic for smaller screens
+      setShowNavbarButton(true);
+      setShowNavbarDropDowm(false);
+      setShowMobileShop(true);
+      setClick(false);
+    } else if (innerWidth <= 820) {
+      // Handling logic for 768 < innerWidth <= 820
+      setShowNavbarButton(true);
+      setShowNavbarDropDowm(false);
+      setShowMobileShop(true);
+      setClick(false);
+    } else if (innerWidth <= 375) {
+      // Handling logic for 820 < innerWidth <= 375
+      setShowNavbarButton(true);
+      setShowNavbarDropDowm(false);
+      setShowMobileShop(true);
+      setClick(false);
+    } else if (innerWidth <= 390) {
+      // Handling logic for 375 < innerWidth <= 390
+      setShowNavbarButton(true);
+      setShowNavbarDropDowm(false);
+      setShowMobileShop(true);
+      setClick(false);
+    } else if (innerWidth <= 430) {
+      // Handling logic for 390 < innerWidth <= 430
       setShowNavbarButton(true);
       setShowNavbarDropDowm(false);
       setShowMobileShop(true);
@@ -82,42 +81,21 @@ function Navbar() {
 
   window.addEventListener("resize", showButton);
 
-  const handleWishlistClick = () => {
-    if (!isLoggedIn) {
-      setShowLoginModal(true);
-    } else {
-      navigate("/wishlist");
-    }
-  };
-
-  const handleCartClick = () => {
-    if (!isLoggedIn) {
-      setShowLoginModal(true);
-    } else {
-      navigate("/cart");
-    }
-  };
-
-  const handleLoginModalClose = () => {
-    setShowLoginModal(false);
-  };
-
   const slides = [
     {
-      url: "/images/image10Copy.jpg",
-      title: "SHOP LEGGINGS",
-      link: "leggings",
-    },
-    { url: "/images/image11Copy.jpg", title: "SHOP SPORT BRAS", link: "bras" },
-    {
-      url: "/images/image12Copy.jpg",
-      title: "SHOP ACCESSORIES",
-      link: "accessories",
+      url: "/images-food/this.jpg",
+      title: "Первая консультация",
+      link: "first_consultation",
     },
     {
-      url: "/images/image13Copy.jpg",
-      title: "SHOP SUPPLEMENTS",
-      link: "supplements",
+      url: "/images-food/this2.jpg",
+      title: "Индивидуальная консультация",
+      link: "personal_consultation",
+    },
+    {
+      url: "/images-food/this3.jpg",
+      title: "Персональная программа",
+      link: "personal_plan",
     },
   ];
 
@@ -137,122 +115,113 @@ function Navbar() {
             style={{ textDecoration: "none" }}
             to="/"
             className="navbar-logo"
-            onClick={closeMobileMenu}
+            onClick={() => {
+              closeMobileMenu(); // Close mobile menu when logo is clicked
+              window.scrollTo(0, 0); // Scroll to the top of the page
+            }}
           >
-            PulseActive
-            <i className="fa-solid fa-heart-pulse heart-navbar"></i>
+            ЕВГЕНИЯ НЕСТЕРОВА
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-x" : "fa-solid fa-bars"}></i>
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            {showNavbarDropdown && (
-              <li
-                className="nav-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <Link to="/shop" className="nav-links">
-                  SHOP
-                </Link>
-              </li>
-            )}
-            {showMobileShop && (
-              <div className="slides-styles">
-                <MobileShop slides={slides} closeMobileMenu={closeMobileMenu} />
-              </div>
-            )}
-            <li className="nav-item">
-              <Link
-                to="/loyalty_club"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                LOYALTY CLUB
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/about_us"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                ABOUT US
-              </Link>
-            </li>
-            {showNavbarButton && (
-              <li className="nav-item">
-                <Link
-                  to="/login"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  LOG IN / SIGN UP
-                </Link>
-              </li>
-            )}
-          </ul>
-          <div className="icons-wrapper">
-            <Link to="/search">
-              <i
-                class="fa-solid fa-magnifying-glass"
-                style={{ color: "#ffffff" }}
-              ></i>
-            </Link>
-            {isLoggedIn ? (
-              <Link to="/wishlist" onClick={handleWishlistClick}>
-                <i class="fa-solid fa-heart" style={{ color: "#ffffff" }}></i>
-              </Link>
-            ) : (
-              <Link to="/login">
-                <i
-                  className="fa-solid fa-heart"
-                  style={{ color: "#ffffff", cursor: "pointer" }}
-                  onClick={() => setShowLoginModal(true)}
-                ></i>
-              </Link>
-            )}
-            {isLoggedIn ? (
-              // Displaying a logout button when the user is logged in
-              <Link to="/account">
-                <i
-                  className="fa-solid fa-user"
-                  style={{ color: "#ffffff" }}
-                ></i>
-              </Link>
-            ) : (
-              // Displaying a link to the login page when the user is not logged in
-              <Link to="/login">
-                <i
-                  className="fa-solid fa-user"
-                  style={{ color: "#ffffff" }}
-                ></i>
-              </Link>
-            )}
-            {isLoggedIn ? (
-              <Link to="/cart" onClick={handleCartClick}>
-                <div className="navigation-cart-icon">
-                  <i
-                    class="fa-solid fa-bag-shopping"
-                    style={{ color: "#ffffff", cursor: "pointer" }}
-                  ></i>
-                  {totalItemCount > 0 && (
-                    <div className="cart-count-notification">
-                      {totalItemCount}
-                    </div>
-                  )}
+          {/* 
+          {showNavbarButton && click && showMobileShop && (
+            <div className="slides-styles">
+              <MobileShop slides={slides} closeMobileMenu={closeMobileMenu} />
+            </div>
+          )} */}
+          <ul
+            className={
+              showNavbarButton && click ? "nav-menu active" : "nav-menu"
+            }
+          >
+            <li className="test">
+              {showMobileShop && (
+                <div className="slides-styles">
+                  <MobileShop
+                    slides={slides}
+                    closeMobileMenu={closeMobileMenu}
+                  />
                 </div>
+              )}
+            </li>
+
+            <li
+              className="nav-item"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Link
+                to="/services"
+                className="nav-links"
+                onClick={() => {
+                  closeMobileMenu();
+                  handleMouseLeave();
+                }}
+              >
+                УСЛУГИ
               </Link>
-            ) : (
-              <Link to="/login">
-                <i
-                  className="fa-solid fa-bag-shopping"
-                  style={{ color: "#ffffff", cursor: "pointer" }}
-                  onClick={() => setShowLoginModal(true)}
-                ></i>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/about_me"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                ОБО МНЕ
               </Link>
-            )}
-          </div>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/feedback"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                ОТЗЫВЫ
+              </Link>
+            </li>
+          </ul>
+          <li className="nav-item nav-icons-and-btn-container">
+            <div className="navbar-social-icons">
+              <a
+                className="social-icon-link whatsapp"
+                href="https://api.whatsapp.com/send?phone=79115271587"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Whatsapp"
+              >
+                <i className="fab fa-whatsapp" />
+              </a>
+              <a
+                className="social-icon-link instagram"
+                href="https://www.instagram.com/evgeniianesterova6770/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i className="fab fa-instagram" />
+              </a>
+              <a
+                className="social-icon-link telegram"
+                href="https://t.me/+-4iqE4iKM9g1OTY0"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
+                <i className="fab fa-telegram" />
+              </a>
+            </div>
+            <button className="nav-btn" onClick={handleShowAskQuestion}>
+              Задать вопрос
+            </button>
+            <AskQuestionModal
+              showAskQuestion={showAskQuestion}
+              onHide={handleCloseAskQuestion}
+              handleCloseAskQuestion={handleCloseAskQuestion}
+            />
+          </li>
         </div>
         {isNavDropdownVisible && (
           <NavDropdown
@@ -261,14 +230,6 @@ function Navbar() {
           />
         )}
       </nav>
-
-      <LoginModal
-        show={showLoginModal}
-        onHide={handleLoginModalClose}
-        title="Login is required"
-        firstLine="Log in or create an account to add your favourite pieces to your Wishlist or to your Cart."
-        secondLine="Plus, you can checkout faster and start collecting Pulse Active Points"
-      />
     </>
   );
 }

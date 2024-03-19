@@ -1,0 +1,131 @@
+.slider {
+  height: 100%;
+  position: relative;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 40px;
+  color: rgb(48, 25, 52);
+  z-index: 1;
+  cursor: pointer;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 40px;
+  color: rgb(48, 25, 52);
+  z-index: 1;
+}
+.title {
+  color: white;
+  font-size: 19px;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  background: rgb(48, 25, 52);
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.title:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+@media only screen and (max-width: 375px) {
+  /* Mobile styles */
+  .title {
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    background: rgb(48, 25, 52);
+    padding: 8px;
+  }
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 390px) {
+  /* Mobile styles */
+  .title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    background: rgb(48, 25, 52);
+    padding: 8px;
+  }
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 430px) {
+  /* Mobile styles */
+  .title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    background: rgb(48, 25, 52);
+    padding: 8px;
+  }
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 32px;
+    font-size: 40px;
+    color: rgb(48, 25, 52);
+    z-index: 1;
+  }
+}

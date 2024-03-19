@@ -1,0 +1,132 @@
+.personal-consultation-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 70px 30px;
+}
+.personal-consultation-block {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.personal-consultation-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: rgb(48, 25, 52);
+}
+.block-title {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+}
+.personal-consult-check {
+  display: flex;
+  flex-direction: row;
+}
+.personal-consult-image-wrapper {
+  width: 600px;
+  height: 830px;
+  display: flex;
+  margin-right: 30px;
+}
+.block-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.block-text {
+  padding: 30px 30px 20px 30px;
+}
+.check-prg {
+  padding-left: 10px;
+}
+.personal-consult-price {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+.price {
+  color: rgb(48, 25, 52);
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.personal-consult-btn {
+  background-color: rgb(48, 25, 52);
+  font-size: 20px;
+  color: white;
+  width: 320px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: none;
+  border-radius: 22px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  display: block;
+}
+.personal-consult-btn:hover {
+  background-color: transparent;
+  color: rgb(48, 25, 52);
+  border: 1px solid rgb(48, 25, 52);
+}
+@media screen and (max-width: 820px) {
+  /* Tablet styles */
+  .personal-consultation-block {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .personal-consultation-title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .personal-consult-image-wrapper {
+    width: 690px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  /* Mobile styles */
+  .personal-consultation-container {
+    padding: 10px 10px 30px 10px;
+  }
+  .personal-consultation-block {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .personal-consultation-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+  }
+  .block-title {
+    font-size: 18px !important;
+    margin-top: 12px !important;
+  }
+  .personal-consult-image-wrapper {
+    width: 340px;
+    height: 400px;
+  }
+  .personal-consult-price {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 14px !important;
+  }
+  .block-text {
+    padding: 30px 30px 20px 30px;
+    font-size: 14px;
+  }
+  .after-consult-prg {
+    font-size: 14px;
+  }
+  .personal-consult-btn {
+    font-size: 16px;
+    width: 280px;
+  }
+}

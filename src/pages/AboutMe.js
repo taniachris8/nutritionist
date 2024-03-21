@@ -3,7 +3,6 @@ import "../App.css";
 import "./css/AboutMe.css";
 import RequestForm from "../components/RequestForm";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 
 function AboutMe() {
   return (

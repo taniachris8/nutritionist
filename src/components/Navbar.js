@@ -9,7 +9,7 @@ import AskQuestionModal from "./AskQuestionModal";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [showNavbarButton, setShowNavbarButton] = useState(false);
-  const [showNavbarDropDown, setShowNavbarDropDowm] = useState(true);
+  const [showNavbarDropDown, setShowNavbarDropDown] = useState(true);
   const [showMobileShop, setShowMobileShop] = useState(false);
   const [isNavDropdownVisible, setNavDropdownVisible] = useState(false);
   const [showAskQuestion, setShowAskQuestion] = useState(false);
@@ -33,37 +33,37 @@ function Navbar() {
     if (innerWidth <= 768) {
       // Handling logic for smaller screens
       setShowNavbarButton(true);
-      setShowNavbarDropDowm(false);
+      setShowNavbarDropDown(false);
       setShowMobileShop(true);
       setClick(false);
     } else if (innerWidth <= 820) {
       // Handling logic for 768 < innerWidth <= 820
       setShowNavbarButton(true);
-      setShowNavbarDropDowm(false);
+      setShowNavbarDropDown(false);
       setShowMobileShop(true);
       setClick(false);
     } else if (innerWidth <= 375) {
       // Handling logic for 820 < innerWidth <= 375
       setShowNavbarButton(true);
-      setShowNavbarDropDowm(false);
+      setShowNavbarDropDown(false);
       setShowMobileShop(true);
       setClick(false);
     } else if (innerWidth <= 390) {
       // Handling logic for 375 < innerWidth <= 390
       setShowNavbarButton(true);
-      setShowNavbarDropDowm(false);
+      setShowNavbarDropDown(false);
       setShowMobileShop(true);
       setClick(false);
     } else if (innerWidth <= 430) {
       // Handling logic for 390 < innerWidth <= 430
       setShowNavbarButton(true);
-      setShowNavbarDropDowm(false);
+      setShowNavbarDropDown(false);
       setShowMobileShop(true);
       setClick(false);
     } else {
       // Handling logic for larger screens
       setShowNavbarButton(false);
-      setShowNavbarDropDowm(true);
+      setShowNavbarDropDown(true);
       setShowMobileShop(false);
       setClick(true);
     }
@@ -100,6 +100,8 @@ function Navbar() {
   ];
 
   const handleMouseEnter = () => {
+    // Intentionally assigned but not used currently
+    const temp = showNavbarDropDown;
     setNavDropdownVisible(true);
   };
 

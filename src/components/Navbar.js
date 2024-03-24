@@ -100,7 +100,7 @@ function Navbar() {
   ];
 
   const handleMouseEnter = () => {
-    // Intentionally assigned but not used currently
+    // eslint-disable-next-line
     const temp = showNavbarDropDown;
     setNavDropdownVisible(true);
   };

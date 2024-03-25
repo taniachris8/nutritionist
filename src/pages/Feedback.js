@@ -74,13 +74,13 @@ function Feedback() {
   ];
   return (
     <>
-      <div className="feedback-upper-banner">
+      {/* <div className="feedback-upper-banner">
         <img
           alt="banner"
           src="/images-food/half1 - Copy.jpeg"
           className="feedback-upper-image"
         />
-      </div>
+      </div> */}
       <div className="feedback-container">
         <h1 className="feedback-title">Отзывы клиентов</h1>
         <p className="feedback-hrd">

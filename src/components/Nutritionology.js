@@ -1,11 +1,9 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 import "./componentsCss/Nutritionology.css";
 
 function Nutritionology() {
-  const handleClick = () => {
-    window.location.href = "/nutritionology";
-  };
   return (
     <>
       <h1 className="nutritionology-hdr">Что такое нутрициология?</h1>
@@ -30,7 +28,7 @@ function Nutritionology() {
               человек, выбирая пищу и то, какое действие оказывает этот выбор на
               организм.
             </p>
-            <p className="nutritionology-prg">
+            <p className="nutritionology-prg-add">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -40,7 +38,7 @@ function Nutritionology() {
               tristique. Duis cursus, mi quis viverra ornare, eros dolor
               interdum nulla.
             </p>
-            <p className="nutritionology-prg">
+            <p className="nutritionology-prg-add">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
@@ -51,10 +49,9 @@ function Nutritionology() {
               interdum nulla.
             </p>
           </div>
-
-          <button className="nutritionology-btn" onClick={handleClick}>
-            Узнать больше
-          </button>
+          <Link to="/nutritionology">
+            <button className="nutritionology-btn">Узнать больше</button>
+          </Link>
         </div>
       </div>
     </>

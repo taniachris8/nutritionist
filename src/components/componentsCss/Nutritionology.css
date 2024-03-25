@@ -31,6 +31,7 @@
 .nutritionology-prgs {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 .nutritionology-prg {
   font-size: 18px;
@@ -278,6 +279,9 @@
   }
   .nutritionology-prg {
     font-size: 16px !important;
+  }
+  .nutritionology-prg-add {
+    display: none;
   }
   .nutritionology-btn {
     font-size: 16px;

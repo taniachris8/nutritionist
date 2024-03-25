@@ -1,11 +1,12 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 import "./componentsCss/Consultations.css";
 
 function Consultations() {
-  const handleClick = (path) => {
-    window.location.href = path;
-  };
+  // const handleClick = (path) => {
+  //   window.location.href = path;
+  // };
   return (
     <div className="consultations-container">
       <h1 className="consultation-hdr">Консультации</h1>
@@ -35,12 +36,9 @@ function Consultations() {
               <p className="check-prg">Обзор проблемы</p>
             </div>
           </div>
-          <button
-            className="consultation-btn"
-            onClick={() => handleClick("/first_consultation")}
-          >
-            Подробнее
-          </button>
+          <Link to="/first_consultation">
+            <button className="consultation-btn">Подробнее</button>
+          </Link>
         </div>
         <div className="consultation-item">
           <h2 className="consulation-title">Индивидуальная консультация</h2>
@@ -63,13 +61,9 @@ function Consultations() {
               <p className="check-prg">Обзор проблемы</p>
             </div>
           </div>
-
-          <button
-            className="consultation-btn"
-            onClick={() => handleClick("/personal_consultation")}
-          >
-            Подробнее
-          </button>
+          <Link to="/personal_consultation">
+            <button className="consultation-btn"> Подробнее</button>
+          </Link>
         </div>
         <div className="consultation-item">
           <h2 className="consulation-title">Персональная программа</h2>
@@ -92,12 +86,10 @@ function Consultations() {
               <p className="check-prg">Обзор проблемы</p>
             </div>
           </div>
-          <button
-            className="consultation-btn"
-            onClick={() => handleClick("/personal_plan")}
-          >
-            Подробнее
-          </button>
+          <Link to="/personal_plan">
+            {" "}
+            <button className="consultation-btn"> Подробнее</button>
+          </Link>
         </div>
       </div>
     </div>

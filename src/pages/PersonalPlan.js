@@ -12,13 +12,13 @@ function PersonalPlan() {
 
   return (
     <>
-      <div className="services-upper-banner">
+      {/* <div className="services-upper-banner">
         <img
           alt="banner"
           src="/images-food/this3.jpg"
           className="services-upper-image"
         />
-      </div>
+      </div> */}
       <div className="personal-plan-container">
         <div className="personal-plan-block">
           <div className="personal-plan-image-wrapper">

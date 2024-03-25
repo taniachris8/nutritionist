@@ -160,6 +160,7 @@ function Navbar() {
                 onClick={() => {
                   closeMobileMenu();
                   handleMouseLeave();
+                  setShowNavbarDropDown(false);
                 }}
               >
                 УСЛУГИ

@@ -6,17 +6,15 @@ import Footer from "../components/Footer";
 function WhatIsNutritionology() {
   return (
     <>
-      <div className="services-upper-banner">
+      {/* <div className="services-upper-banner">
         <img
           alt="banner"
           src="/images-food/half2 - Copy.jpeg"
           className="services-upper-image"
         />
-      </div>
+      </div> */}
       <div className="what-is-nutri-container">
-        <h1 className="what-is-nutri-title">
-          Что такое нутрициология простыми словами?
-        </h1>
+        <h1 className="what-is-nutri-title">Что такое нутрициология?</h1>
         <div className="what-is-nutri-block">
           <div className="what-is-nutri-img-container">
             <img

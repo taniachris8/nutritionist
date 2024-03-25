@@ -155,9 +155,9 @@
 @media only screen and (max-width: 430px) {
   /* Mobile styles */
   .hero-container {
-    background: url("/public/images-food/hero1.jpg") center center/ 180% auto
+    background: url("/public/images-food/hero1.jpg") center center/ 200% auto
       no-repeat !important;
-    height: 40vh !important;
+    height: 60vh !important;
     margin-bottom: 20px !important;
     padding-top: 20px;
   }

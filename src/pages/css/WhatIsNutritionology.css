@@ -11,7 +11,7 @@
 .what-is-nutri-block {
   display: flex;
   flex-direction: column;
-  margin: 10px 30px 200px 70px;
+  margin: 10px 30px 320px 70px !important;
 }
 .what-is-nutri-img-container {
   display: flex;
@@ -46,7 +46,7 @@
 .what-is-nutri-lower-block {
   display: flex;
   flex-direction: column;
-  margin: 10px 70px 260px 70px;
+  margin: 10px 70px 260px 70px !important;
   position: relative;
 }
 .lower-img-container {
@@ -100,12 +100,12 @@
   .what-is-nutri-block {
     display: flex;
     flex-direction: column;
-    margin: 10px 30px 50px 30px;
+    margin: 10px 30px 50px 30px !important;
   }
   .what-is-nutri-lower-block {
     display: flex;
     flex-direction: column;
-    margin: 10px 30px 50px 30px;
+    margin: 10px 30px 50px 30px !important;
     position: relative;
   }
   .lower-img-container {

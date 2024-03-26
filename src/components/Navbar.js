@@ -102,7 +102,12 @@ function Navbar() {
   const handleMouseEnter = () => {
     // eslint-disable-next-line
     const temp = showNavbarDropDown;
-    setNavDropdownVisible(true);
+    // setNavDropdownVisible(true);
+    const innerWidth = window.innerWidth;
+    if (innerWidth > 820) {
+      // Adjust this threshold according to your needs
+      setNavDropdownVisible(true);
+    }
   };
 
   const handleMouseLeave = () => {
@@ -160,7 +165,6 @@ function Navbar() {
                 onClick={() => {
                   closeMobileMenu();
                   handleMouseLeave();
-                  setShowNavbarDropDown(false);
                 }}
               >
                 УСЛУГИ

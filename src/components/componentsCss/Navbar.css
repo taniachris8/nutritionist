@@ -127,8 +127,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  /* Tablet styles */
+@media screen and (max-width: 820px) {
   .nav-btn {
     display: none;
   }
@@ -142,9 +141,9 @@
   }
 
   .menu-icon {
-    display: flex; /* Change display property to flex */
-    align-items: center !important; /* Align icon vertically */
-    cursor: pointer; /* Add cursor style to indicate clickability */
+    display: flex;
+    align-items: center !important;
+    cursor: pointer;
     position: absolute;
     right: 0;
     padding-right: 30px;
@@ -156,7 +155,7 @@
   }
 
   .nav-menu {
-    display: none; /* Hide the menu by default */
+    display: none;
   }
 
   .nav-menu.active {
@@ -270,17 +269,10 @@
     height: 420px;
     margin: 0 auto;
     margin-left: 0;
-    /* margin-left: 14px;
-    padding: 0;
-    position: absolute;
-    top: 88px;
-    left: 0; */
   }
 }
 
 @media only screen and (max-width: 375px) {
-  /* Mobile styles */
-
   .navbar-container {
     padding: 0 20px;
   }
@@ -297,9 +289,9 @@
   }
 
   .menu-icon {
-    display: flex; /* Change display property to flex */
-    align-items: center; /* Align icon vertically */
-    cursor: pointer; /* Add cursor style to indicate clickability */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     right: 0;
     padding-right: 30px;
@@ -322,9 +314,9 @@
   }
 
   .menu-icon {
-    display: flex; /* Change display property to flex */
-    align-items: center; /* Align icon vertically */
-    cursor: pointer; /* Add cursor style to indicate clickability */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     right: 0;
     padding-right: 20px;
@@ -335,7 +327,7 @@
     font-size: 1.4rem;
   }
   .nav-menu {
-    display: none; /* Hide the menu by default */
+    display: none;
   }
 
   .nav-menu.active {
@@ -375,8 +367,6 @@
   }
 }
 @media only screen and (max-width: 390px) {
-  /* Mobile styles */
-
   .navbar-container {
     padding: 0 20px;
   }
@@ -393,9 +383,9 @@
   }
 
   .menu-icon {
-    display: flex; /* Change display property to flex */
-    align-items: center; /* Align icon vertically */
-    cursor: pointer; /* Add cursor style to indicate clickability */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     right: 0;
     padding-right: 30px;
@@ -418,9 +408,9 @@
   }
 
   .menu-icon {
-    display: flex; /* Change display property to flex */
-    align-items: center; /* Align icon vertically */
-    cursor: pointer; /* Add cursor style to indicate clickability */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     position: absolute;
     right: 0;
     padding-right: 20px;
@@ -431,7 +421,7 @@
     font-size: 1.4rem;
   }
   .nav-menu {
-    display: none; /* Hide the menu by default */
+    display: none;
   }
 
   .nav-menu.active {

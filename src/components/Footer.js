@@ -21,7 +21,7 @@ function Footer() {
                 <div className="contact-details">
                   <div className="contact-details-email">
                     <i class="fa-solid fa-envelope"></i>
-                    <p className="contact-email">email@gmail.com</p>
+                    <p className="contact-email">nutriconsult@mail.ru</p>
                   </div>
                   <div className="contact-details-phone">
                     <i class="fa-solid fa-phone"></i>
@@ -63,27 +63,18 @@ function Footer() {
             </div>
             <div className="footer-link-items">
               <h2>СОЦИАЛЬНЫЕ СЕТИ</h2>
-              <div className="social-media-wrapper">
+              <div className="social-footer-wrapper">
                 <a
-                  className="social-icon whatsapp"
-                  href="https://api.whatsapp.com/send?phone=79115271587"
+                  className="social-footer-link vk"
+                  href="https://vk.com/club225153257"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Whatsapp"
+                  aria-label="VK"
                 >
-                  <i className="fab fa-whatsapp" />
+                  <i class="fab fa-vk"></i>
                 </a>
                 <a
-                  className="social-icon telegram"
-                  href="https://t.me/+-4iqE4iKM9g1OTY0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Telegram"
-                >
-                  <i className="fab fa-telegram" />
-                </a>
-                <a
-                  className="social-icon instagram"
+                  className="social-footer-link instagram"
                   href="https://www.instagram.com/evgeniianesterova6770/"
                   target="_blank"
                   rel="noopener noreferrer"

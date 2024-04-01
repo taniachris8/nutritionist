@@ -193,13 +193,13 @@ function Navbar() {
           <li className="nav-item nav-icons-and-btn-container">
             <div className="navbar-social-icons">
               <a
-                className="social-icon-link whatsapp"
-                href="https://api.whatsapp.com/send?phone=79115271587"
+                className="social-icon-link vk"
+                href="https://vk.com/club225153257"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Whatsapp"
+                aria-label="VK"
               >
-                <i className="fab fa-whatsapp" />
+                <i className="fab fa-vk"></i>
               </a>
               <a
                 className="social-icon-link instagram"
@@ -209,15 +209,6 @@ function Navbar() {
                 aria-label="Instagram"
               >
                 <i className="fab fa-instagram" />
-              </a>
-              <a
-                className="social-icon-link telegram"
-                href="https://t.me/+-4iqE4iKM9g1OTY0"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Telegram"
-              >
-                <i className="fab fa-telegram" />
               </a>
             </div>
             <button className="nav-btn" onClick={handleShowAskQuestion}>

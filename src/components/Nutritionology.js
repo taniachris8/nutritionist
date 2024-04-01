@@ -19,34 +19,24 @@ function Nutritionology() {
         <div className="nutritionology-text">
           <div className="nutritionology-prgs">
             <p className="nutritionology-prg">
-              Нутрициология – это наука о питании, предметом изучения которой
-              является еда и её влияние на организм человека в целом и на
-              отдельные его органы. Нутрициология изучает состав продуктов
-              питания, процессы взаимодействия содержащихся в них пищевых
-              веществ и других компонентов, способ употребления пищи, процессы
-              усвоения. Большой упор делается на то, чем руководствуется
-              человек, выбирая пищу и то, какое действие оказывает этот выбор на
-              организм.
+              Нутрициология - это область науки, посвященная изучению влияния
+              питания на здоровье человека.
             </p>
             <p className="nutritionology-prg-add">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor
-              interdum nulla.
+              В ее основе лежит анализ питательных веществ, их воздействия на
+              организм, а также определение оптимального питания для поддержания
+              здоровья и профилактики болезней.
             </p>
             <p className="nutritionology-prg-add">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Suspendisse varius enim in eros elementum
-              tristique. Duis cursus, mi quis viverra ornare, eros dolor
-              interdum nulla.
+              Нутрициологи исследуют различные аспекты питания, включая влияние
+              различных продуктов на организм, рекомендации по составлению
+              рационов и диет, а также принципы здорового образа жизни,
+              основанные на питании.
+            </p>
+            <p className="nutritionology-prg-add">
+              Эта наука играет важную роль в повседневной жизни людей, помогая
+              им принимать осознанные решения о своем питании и улучшать свое
+              общее здоровье.
             </p>
           </div>
           <Link to="/nutritionology">

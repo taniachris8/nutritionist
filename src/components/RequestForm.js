@@ -31,7 +31,7 @@ function RequestForm() {
     }
 
     emailjs
-      .sendForm("service_o63h0md", "template_dmnvpjd", form.current, {
+      .sendForm("service_ek1s2sk", "template_dmnvpjd", form.current, {
         publicKey: "S3NkJowHFmQ-Rhco_",
       })
       .then(

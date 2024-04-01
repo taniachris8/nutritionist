@@ -23,10 +23,10 @@ function Footer() {
                     <i class="fa-solid fa-envelope"></i>
                     <p className="contact-email">nutriconsult@mail.ru</p>
                   </div>
-                  <div className="contact-details-phone">
+                  {/* <div className="contact-details-phone">
                     <i class="fa-solid fa-phone"></i>
                     <p className="contact-phone">+79115271587</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

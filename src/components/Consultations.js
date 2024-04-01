@@ -11,8 +11,8 @@ function Consultations() {
     <div className="consultations-container">
       <h1 className="consultation-hdr">Консультации</h1>
       <p className="consultation-prg">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        varius enim in eros elementum tristique.
+        Наши услуги помогут вам достичь желаемых результатов, основанных на
+        индивидуальных потребностях организма и на ваших целях.
       </p>
       <div className="consultation-wrapper">
         <div className="consultation-item">

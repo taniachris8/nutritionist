@@ -7,17 +7,30 @@ import TestimonialSlider from "../components/TestimonialSlider";
 function Feedback() {
   const slides = [
     {
-      url: "/images-food/people/person1.jpg",
+      url: "/images-food/people/tania.jpg",
       feedback: (
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+          Я хотела бы выразить благодарность нутрициологу Евгении за её
+          профессионализм и внимание к моим потребностям. Сотрудничество с ней
+          принесло мне огромную пользу в области здорового питания и достижения
+          моих целей(в занятиях спортом(набор мышечной массы), а также в
+          улучшении настроения). Евгения помогла мне провести анализ моего
+          рациона питания, выявить ненужные продукты и внести коррективы.Ее
+          глубокие знания в области нутрициологии позволили ей точно определить,
+          какие продукты следует исключить из моего рациона, а какие добавить
+          для достижения желаемых результатов.
         </p>
       ),
-      name: "Сергей Кузнецов",
-      job: "программист",
+      feedbackSecond: (
+        <p>
+          Я очень довольна результатами нашей работы. Спасибо, Евгения, за ваше
+          ценное руководство и помощь в моем путешествии к здоровому образу
+          жизни. Я рекомендую вас всем, кто ищет квалифицированного и
+          заботливого нутрициолога.
+        </p>
+      ),
+      name: "Татьяна Орански",
+      job: "front-end developer",
     },
     {
       url: "/images-food/people/person2.jpg",

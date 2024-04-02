@@ -33,6 +33,7 @@ function TestimonialSlider({ slides }) {
             className="testi-image"
           />
           <p className="testi-prg">{slides[currentIndex].feedback}</p>
+          <p className="testi-prg">{slides[currentIndex].feedbackSecond}</p>
           <i class="fa-solid fa-quote-left"></i>
 
           <div className="testi-details">

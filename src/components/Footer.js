@@ -57,9 +57,6 @@ function Footer() {
               <Link className="text-links" to="/personal_plan">
                 Персональная программа
               </Link>
-              <Link className="text-links" to="/">
-                Подарочный сертификат
-              </Link>
             </div>
             <div className="footer-link-items">
               <h2>СОЦИАЛЬНЫЕ СЕТИ</h2>
@@ -86,25 +83,6 @@ function Footer() {
             </div>
           </div>
         </div>
-        {/* <section className="footer-subscription">
-          <h1 className="footer-subscription-heading">
-            Подпишитесь на рассылку, чтобы не пропустить обновления.
-          </h1>
-          <p className="footer-subscription-text">
-            Вы сможете отписаться в любое время
-          </p>
-          <div className="input-areas">
-            <form>
-              <input
-                type="email"
-                name="email"
-                placeholder="Адрес электронной почты"
-                className="footer-input"
-              />
-              <button className="footer-btn">Подписаться</button>
-            </form>
-          </div>
-        </section> */}
       </div>
 
       <div className="website-rights">

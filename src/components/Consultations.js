@@ -11,14 +11,18 @@ function Consultations() {
     <div className="consultations-container">
       <h1 className="consultation-hdr">Консультации</h1>
       <p className="consultation-prg">
-        Наши услуги помогут вам достичь желаемых результатов, основанных на
-        индивидуальных потребностях организма и на ваших целях.
+        Услуги, которые помогут достичь желаемых результатов, основанных на
+        ваших целях и индивидуальных потребностях организма
       </p>
       <div className="consultation-wrapper">
         <div className="consultation-item">
           <h2 className="consulation-title">Первая консультация</h2>
           <p className="consultation-price">Бесплатно</p>
           <div className="consultation-details">
+            <div className="check-container">
+              <i class="fa-solid fa-check"></i>
+              <p className="check-prg">Знакомство</p>
+            </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
               <p className="check-prg">Обзор проблемы</p>
@@ -29,11 +33,7 @@ function Consultations() {
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Первоначальный диагноз</p>
-            </div>
-            <div className="check-container">
-              <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Обзор проблемы</p>
+              <p className="check-prg">Рекомендации по питанию</p>
             </div>
           </div>
           <Link to="/first_consultation">
@@ -50,15 +50,15 @@ function Consultations() {
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Индивидуальное задание</p>
+              <p className="check-prg">Индивидуальные задания</p>
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Первоначальный диагноз</p>
+              <p className="check-prg">Рекомендации по питанию</p>
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Обзор проблемы</p>
+              <p className="check-prg">План действий</p>
             </div>
           </div>
           <Link to="/personal_consultation">
@@ -75,15 +75,15 @@ function Consultations() {
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Индивидуальное задание</p>
+              <p className="check-prg">Индивидуальные задания</p>
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Первоначальный диагноз</p>
+              <p className="check-prg">Рекомендации по питанию</p>
             </div>
             <div className="check-container">
               <i class="fa-solid fa-check"></i>
-              <p className="check-prg">Обзор проблемы</p>
+              <p className="check-prg">План действий и сопровождение</p>
             </div>
           </div>
           <Link to="/personal_plan">

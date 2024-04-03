@@ -29,59 +29,47 @@ function Feedback() {
           нутрициолога.
         </p>
       ),
-      name: "Татьяна Орански",
+      name: "Татьяна",
       job: "front-end developer",
     },
     {
-      url: "/images-food/people/person2.jpg",
+      url: "/images-food/people/vlad.jpg",
       feedback: (
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+          Моё сотрудничество с Евгенией началось с самых первых этапов её
+          профессионального пути. Во время общения я ощущал внимание, заботу,
+          поддержку нутрициолога. Программа сопровождения, разработанная ей,
+          казалась мне чем-то вроде эксперимента, в который я хотел вступить
+          из-за увлеченности темой питания. В современном мире вокруг нас
+          собрано столько противоречивой информации, что порой сложно
+          разобраться в ней. Я искал человека, который поможет мне с этим.
         </p>
       ),
-      name: "Сергей Кузнецов",
-      job: "программист",
+      feedbackSecond: (
+        <p>
+          Сегодня я чувствую себя гораздо лучше, благодаря проделанной работе. В
+          настоящее время я продолжаю внедрять изменения в свою жизнь и очень
+          благодарен Евгении за то, что она проходит этот путь со мной.
+        </p>
+      ),
+      name: "Влад",
+      job: "инженер",
     },
     {
-      url: "/images-food/people/person3.jpg",
+      url: "/images-food/people/yarin.jpg",
       feedback: (
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+          Я долгое время откладывал визит к нутрициологу из-за страха перед
+          строгим контролем, постоянными отчётами о съеденном, ограничениями в
+          любимых продуктах. Очень тяжело менять привычный образ жизни. Однако,
+          когда я встретился с Евгенией, все мои опасения исчезли. Оказалось,
+          что под руководством специалиста можно достичь желаемых результатов -
+          улучшить здоровье, снизить вес, не погружаясь при этом в состояние
+          стресса.
         </p>
       ),
-      name: "Сергей Кузнецов",
-      job: "программист",
-    },
-    {
-      url: "/images-food/people/person4.jpg",
-      feedback: (
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
-        </p>
-      ),
-      name: "Сергей Кузнецов",
-      job: "программист",
-    },
-    {
-      url: "/images-food/people/person5.jpg",
-      feedback: (
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
-        </p>
-      ),
-      name: "Сергей Кузнецов",
+      feedbackSecond: <p>Благодарю Евгению за ее труд и поддержку.</p>,
+      name: "Ярин",
       job: "программист",
     },
   ];

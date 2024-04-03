@@ -51,8 +51,7 @@ function FirstConsultation() {
                   <i class="fa-solid fa-check"></i>
                   <p className="check-prg">
                     Анализ текущего образа жизни: физических упражнений, сна,
-                    стресса и всего остального, что может повлиять на общее
-                    здоровье
+                    стресса и всего, что может повлиять на общее здоровье
                   </p>
                 </div>
                 <div className="first-consult-check">
@@ -77,12 +76,6 @@ function FirstConsultation() {
             </p>
             <div className="content-wrapper">
               <div className="block-text">
-                <div className="first-consult-check">
-                  <i class="fa-solid fa-check"></i>
-                  <p className="check-prg">
-                    План действий для корректировки текущего состояния
-                  </p>
-                </div>
                 <div className="first-consult-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="check-prg">

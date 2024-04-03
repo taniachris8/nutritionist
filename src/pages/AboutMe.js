@@ -52,41 +52,35 @@ function AboutMe() {
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="block-check-prg">
-                    сформулировать выполнимые цели
+                    Сформулировать выполнимые цели
                   </p>
                 </div>
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="block-check-prg">
-                    сформулировать выполнимые цели
-                  </p>
-                </div>
-                <div className="block-check">
-                  <i class="fa-solid fa-check"></i>
-                  <p className="block-check-prg">
-                    выработать мотивацию к здоровому питанию без жестких
+                    Выработать мотивацию к здоровому питанию без жестких
                     запретов, провоцирующих сбои пищевого поведения
                   </p>
                 </div>
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="block-check-prg">
-                    действовать, несмотря на критику близких
+                    Действовать, несмотря на критику близких
                   </p>
                 </div>
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="block-check-prg">
-                    преодолевать застои, когда видимого прогресса нет
+                    Преодолевать застои, когда видимого прогресса нет
                   </p>
                 </div>
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
-                  <p className="block-check-prg">полюбить здоровое питание</p>
+                  <p className="block-check-prg">Полюбить здоровое питание</p>
                 </div>
                 <div className="block-check">
                   <i class="fa-solid fa-check"></i>
-                  <p className="block-check-prg">закрепить достигнутое</p>
+                  <p className="block-check-prg">Закрепить достигнутое</p>
                 </div>
               </div>
             </div>

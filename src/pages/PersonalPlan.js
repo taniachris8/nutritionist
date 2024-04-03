@@ -12,13 +12,6 @@ function PersonalPlan() {
 
   return (
     <>
-      {/* <div className="services-upper-banner">
-        <img
-          alt="banner"
-          src="/images-food/this3.jpg"
-          className="services-upper-image"
-        />
-      </div> */}
       <div className="personal-plan-container">
         <div className="personal-plan-block">
           <div className="personal-plan-image-wrapper">
@@ -72,11 +65,6 @@ function PersonalPlan() {
             <h1 className="block-title">
               Что вы получите во время сопровождения:
             </h1>
-            <p className="after-consult-prg">
-              После индивидуальной консультации я создам для вас
-              нутрицевтический отчёт, который будет выслан вам в электронном
-              виде. Нутрицевтический отчёт будет содержать:
-            </p>
             <div className="content-wrapper">
               <div className="block-text">
                 <div className="personal-plan-check">
@@ -89,8 +77,8 @@ function PersonalPlan() {
                 <div className="personal-plan-check">
                   <i class="fa-solid fa-check"></i>
                   <p className="check-prg">
-                    Постоянный контакт с нами для контроля динамики изменений в
-                    вашем питании и здоровье
+                    Постоянный контакт для контроля динамики изменений в вашем
+                    питании и здоровье
                   </p>
                 </div>
                 <div className="personal-plan-check">

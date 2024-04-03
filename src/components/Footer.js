@@ -21,7 +21,7 @@ function Footer() {
                 <div className="contact-details">
                   <div className="contact-details-email">
                     <i class="fa-solid fa-envelope"></i>
-                    <p className="contact-email">nutriconsult@mail.ru</p>
+                    <p className="contact-email">evanutriconsult@gmail.com</p>
                   </div>
                   {/* <div className="contact-details-phone">
                     <i class="fa-solid fa-phone"></i>

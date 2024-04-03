@@ -33,7 +33,7 @@ function AskQuestionModal({ onHide, showAskQuestion }) {
     }
 
     emailjs
-      .sendForm("service_ngq7wue", "template_dmnvpjd", form.current, {
+      .sendForm("service_x6nps1c", "template_dmnvpjd", form.current, {
         publicKey: "S3NkJowHFmQ-Rhco_",
       })
       .then(

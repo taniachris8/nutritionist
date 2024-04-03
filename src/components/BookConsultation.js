@@ -36,7 +36,7 @@ function BookConsultation({ onHide, showBookConsultation }) {
     }
 
     emailjs
-      .sendForm("service_ngq7wue", "template_8hrbezg", form.current, {
+      .sendForm("service_x6nps1c", "template_8hrbezg", form.current, {
         publicKey: "S3NkJowHFmQ-Rhco_",
       })
       .then(

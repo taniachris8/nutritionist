@@ -9,26 +9,6 @@ function NavDropdown({ onMouseEnter, onMouseLeave }) {
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {/* <div className="nav-dropdown-item">
-        <h1 className="item-categories-title">Консультации</h1>
-        <div className="item-categories">
-          <Link className="shop-menu-item" to="/leggings">
-            Индивидуальная консультация
-          </Link>
-          <Link className="shop-menu-item" to="/bras">
-            Разработка плана питания
-          </Link>
-          <Link className="shop-menu-item" to="/accessories">
-            Персональная программа
-          </Link>
-          <Link className="shop-menu-item" to="/supplements">
-            Корпоративные клиенты
-          </Link>
-          <Link className="shop-menu-item" to="/shop">
-            Подарочный сертификат
-          </Link>
-        </div>
-      </div> */}
       <div className="nav-dropdown-item">
         <img
           src="/images-food/this.jpg"

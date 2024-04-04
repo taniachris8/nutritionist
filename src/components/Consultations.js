@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import "./componentsCss/Consultations.css";
 
 function Consultations() {
-  // const handleClick = (path) => {
-  //   window.location.href = path;
-  // };
   return (
     <div className="consultations-container">
       <h1 className="consultation-hdr">Консультации</h1>

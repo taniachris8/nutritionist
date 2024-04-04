@@ -132,12 +132,6 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fa-solid fa-x" : "fa-solid fa-bars"}></i>
           </div>
-          {/* 
-          {showNavbarButton && click && showMobileShop && (
-            <div className="slides-styles">
-              <MobileShop slides={slides} closeMobileMenu={closeMobileMenu} />
-            </div>
-          )} */}
           <ul
             className={
               showNavbarButton && click ? "nav-menu active" : "nav-menu"

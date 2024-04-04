@@ -12,13 +12,6 @@ function FirstConsultation() {
 
   return (
     <>
-      {/* <div className="services-upper-banner">
-        <img
-          alt="banner"
-          src="/images-food/this.jpg"
-          className="services-upper-image"
-        />
-      </div> */}
       <div className="first-consultation-container">
         <div className="first-consultation-block">
           <div className="first-consult-image-wrapper">
